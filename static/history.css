@@ -1,0 +1,97 @@
+ .u-section-1 {
+  background-image: none;
+}
+
+#deleteButton{
+  color: #cb1741;
+}
+
+
+.u-section-1 .u-sheet-1 {
+  min-height: 924px;
+}
+
+.u-section-1 .u-text-1 {
+  font-family: Poppins;
+  font-size: 2.25rem;
+  margin: 40px auto 0 0;
+}
+
+.u-section-1 .u-group-1 {
+  min-height: 708px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  height: auto;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.u-section-1 .u-table-1 {
+  margin-bottom: 0;
+  margin-top: 35px;
+}
+
+.u-block-e5cb-79 {
+  height: 45px;
+}
+
+.u-block-e5cb-80 {
+  font-family: Poppins;
+}
+
+.u-block-e5cb-81 {
+  font-family: Poppins;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 auto 0 0;
+}
+
+.u-section-1 .u-table-cell-1 {
+  font-family: Poppins;
+}
+
+.u-section-1 .u-table-cell-2 {
+  font-family: Poppins;
+  font-weight: 700;
+}
+
+.u-block-e5cb-75 {
+  height: 46px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 794px;
+  }
+
+  .u-section-1 .u-group-1 {
+    min-height: 611px;
+    height: auto;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-top: 30px;
+  }
+
+  .u-section-1 .u-table-cell-2 {
+    font-size: 1rem;
+    margin: 0 auto 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-text-1 {
+    font-size: 1.5rem;
+  }
+}

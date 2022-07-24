@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+    <section class="u-clearfix u-section-1" id="sec-f708">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-text u-text-default u-text-1">Log In to Your Account!</h3>
+        <div class="u-border-2 u-border-grey-25 u-line u-line-horizontal u-line-1"></div>
+        <div class="u-form u-form-1">
+
+          
+         
+          <form method="POST" class=" u-inner-form" source="custom" name="form" style="padding: 10px;">
+            {% csrf_token %}
+            {{form}}
+            
+            <!-- <div class="u-form-group u-form-group-1">
+              <label for="text-fb83" class="u-label">Username*</label>
+              <input type="text" placeholder="Enter your username" id="text-fb83" name="text" class="u-border-2 u-border-grey-30 u-custom-font u-input u-input-rectangle u-radius-5 u-white u-input-1" required="required" maxlength="300">
+            </div>
+            <div class="u-form-group u-form-group-2">
+              <label for="text-9218" class="u-label">Password*</label>
+              <input type="text" placeholder="Enter your password" id="text-9218" name="text-1" class="u-border-2 u-border-grey-30 u-custom-font u-input u-input-rectangle u-radius-5 u-white u-input-2">
+            </div> -->
+
+            <!-- <div class="u-align-center u-form-group u-form-submit"> -->
+              <!-- <a  class="u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-radius-38 u-btn-1">Log in</a> -->
+              <input type="submit" value="Log In" class="u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-dark-1 u-palette-1-base u-radius-38 u-btn-1">
+            <!-- </div> -->
+            <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+            <div class="">{{message}}</div>
+            
+          </form>
+          
+
+        </div>
+        
+        <p class="u-text u-text-default u-text-2"> Don't have an account?&nbsp;<a href="/register" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2">Register</a>
+        </p>
+      </div>
+    </section>
+    
+{% endblock %}
