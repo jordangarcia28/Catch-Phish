@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>This is the history page</h1>
+    <br>
+      
+    
+    <!-- <div>
+        <h1>Result:</h1>
+        <div> </div>
+    </div> -->
+
+
+    
+
+    <div>
+        <h1>History:</h1><br>
+        {% for td in user.url_user.all %}
+          <a href="/{{td.id}}">{{td.url}}</a><br>
+          <a href="{% url 'delete' td.id %}">Delete</a>
+
+        {% endfor %}
+
+
+   
+    </div>
+{% endblock content %}

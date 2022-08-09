@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth.views import PasswordChangeView
+from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
+from django.contrib.auth.views import PasswordChangeView, PasswordChangeDoneView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib import messages, auth
@@ -28,7 +28,7 @@ def register(request):
 
 def login_view(request):
     form = LoginForm()
-    message = 'fsdf'
+    message = 'helo'
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
@@ -70,10 +70,11 @@ def profile(request):
 
     return render(request, 'user/profile.html', {'user_form': user_form})
 
-class ChangePasswordView(SuccessMessageMixin, PasswordChangeView):
+class PasswordsChangeView(SuccessMessageMixin, PasswordChangeView):
     template_name = 'user/change_password.html'
     success_message = "Successfully Changed Your Password"
-    # success_url = reverse_lazy('users-home')
+    # success_url = reverse_lazy('home')
+    success_url=reverse_lazy('password_change_done')
 
 
 
