@@ -720,7 +720,9 @@ def get_screenshot(url):
     return image_name
 
 def report(url, email):
-    message = {'message': 'Successfully reported',
-                'uuid': 'f3QPIKZO6PkFskKR3ahzrHoeFGUx3hmR'}
-                
+    r = requests.post('https://report.netcraft.com/api/v2/report/urls', json={
+        "email": email,
+        "urls": [url],
+    })
+    message = r.json()
     return 1 if re.search("Successfully", message['message']) else 0
